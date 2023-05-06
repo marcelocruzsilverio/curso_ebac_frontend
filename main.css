@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  background-color: #071c77;
+  color: #fff;
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+header button {
+  margin-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  background-color: #2db50c;
+  color: #fff;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #32841e;
+}
+
+form {
+  background-color: #d2d7e7;
+  text-align: center;
+  padding: 35px 0;
+  display: none;
+}
+
+input,
+.form-button {
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  width: 270px;
+  border: none;
+  border-radius: 5px;
+}
+
+input {
+  background-color: #fff;
+}
+
+input:focus {
+  border: 2px solid blue;
+  outline: none;
+}
+
+.form-button {
+  background-color: #1638ce;
+  color: #fff;
+  cursor: pointer;
+  width: 110px;
+}
+
+.form-button:hover {
+  background-color: #061765;
+}
+
+.cancel {
+  background-color: red;
+}
+
+.cancel:hover {
+  background-color: #9f0a0a;
+}
+
+#clean-list {
+  background-color: #aeae04;
+}
+
+#clean-list:hover {
+  background-color: #cccc38;
+}
+
+.ul-task {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #061765;
+}
+
+.clicked {
+  text-decoration: line-through;
+}
