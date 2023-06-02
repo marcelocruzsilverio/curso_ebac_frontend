@@ -5,13 +5,13 @@ const uglify = require('gulp-uglify');
 const obfuscate = require('gulp-obfuscate');
 const imagemim = require('gulp-imagemin')
 
-function comprimeImagens() {
+function compressImages() {
   return gulp.src('./source/images/*')
   .pipe(imagemim())
   .pipe(gulp.dest('./build/images'))
 }
 
-function comprimeJavaScript() {
+function compressJavaScript() {
   return gulp.src('./source/scripts/*.js')
   .pipe(uglify())
   .pipe(obfuscate())
@@ -19,7 +19,7 @@ function comprimeJavaScript() {
   
 }
 
-function compilaSass() {
+function compileSass() {
   return gulp
     .src("./source/styles/*main.scss")
     .pipe(sourcemaps.init())
@@ -36,16 +36,16 @@ exports.default = function () {
   gulp.watch(
     "./source/styles/*scss",
     { ignoreInitial: false },
-    gulp.series(compilaSass)
+    gulp.series(compileSass)
   );
   gulp.watch(
     "./source/scripts/*.js",
     { ignoreInitial: false },
-    gulp.series(comprimeJavaScript)
+    gulp.series(compressJavaScript)
   );
   gulp.watch(
     "./source/images/*",
     { ignoreInitial: false },
-    gulp.series(comprimeImagens)
+    gulp.series(compressImages)
   );
 };
