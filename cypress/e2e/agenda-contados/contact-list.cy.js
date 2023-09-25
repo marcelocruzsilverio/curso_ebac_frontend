@@ -1,4 +1,4 @@
-describe("Testes para a página de candidatura", () => {
+describe("Testes para a página de lista de contatos", () => {
   beforeEach(() => {
     cy.visit("https://agenda-contatos-react.vercel.app/");
   });
